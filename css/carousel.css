@@ -1,0 +1,28 @@
+/*developed by Viktoriia Kavitska*/
+.page-block {
+    height: 500px;
+    width: 1050px;
+    margin: auto;
+}
+
+.item, .pages-product__image-wrapper {
+    overflow:hidden;
+    /*width: 380px;*/
+    /*height:250px;*/
+}
+
+.item img, .pages-product__image-wrapper img {
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+}
+
+.item img:hover, .pages-product__image-wrapper:hover img{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.carousel-caption {
+    margin-bottom: 20px;
+}
+/*--------------------------------------*/

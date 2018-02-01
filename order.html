@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--Header and footer, Fourth page, Fifth page developed by Nastya Suvorova;
+Login, Register modal, First main page, Second page, Third page developed by Viktoriia Kavitska;
+Cart Icon Modal developed by Tamara Lobzina-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Подарки ручной работы, хендмейд, дизайнерские и необычные вещи - Love Handmade</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="icon" href="https://handmade.ru/assets/favicon/fav/apple-touch-icon-57x57-c4d7517bdf5fd7b8e65a592ffdefd2bda2c52fdd17f2b4c0e352cd891b6ea923.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/indexpage.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/basket.css">
+    <link rel="stylesheet" href="css/filters.css">
+    <link rel="stylesheet" href="css/order.css">
+</head>
+
+<body>
+<header class="container-fluid">
+    <div class="container">
+        <div class="row topHeader">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4 text-center" id="goToIndexHtml"><h1>Do It Yourself</h1></div>
+            <div class="col-md-4 text-right">
+
+            </div>
+        </div>
+        <nav class="text-center categoryTags" id="categoryNameMainPage">
+        </nav>
+    </div>
+</header>
+
+<!-- FORM CONTENT-->
+<div class="content">
+
+    <div class="checkout">
+
+        <div class="content">
+
+            <form id="checkoutForm" class="editForm" action="#" accept-charset="UTF-8" method="post"
+                  novalidate="novalidate">
+
+                <div class="checkoutTitle">Оформить заказ</div>
+
+                <!--User Input for Form-->
+
+                <div class="checkoutFormWrapper">
+
+                    <div class="checkoutForm">
+                        <div class="checkoutForm1">
+
+                            <div class="checkoutFormBlock">
+
+                                <div class="checkoutFormBlockName">Контактная информация</div>
+
+                                <label class="checkoutFormFieldName" for="firstName2">Имя</label>
+                                <div class="checkoutFormField">
+                                    <span class="error" id="nameError2"></span>
+
+                                    <input class="checkoutFormInput" id="firstName2" required="required" type="text"
+                                           name="orderPurchase[firstName]" aria-required="true">
+
+                                </div>
+
+                                <label class="checkoutFormFieldName" for="middleName2">Отчество</label>
+                                <div class="checkoutFormField">
+                                    <span class="error" id="middleNameError2"></span>
+
+                                    <input class="checkoutFormInput" id="middleName2" required="required"
+                                           type="text" name="orderPurchase[middleName]" aria-required="true"></div>
+
+                                <label class="checkoutFormFieldName" for="lastName2">Фамилия</label>
+                                <div class="checkoutFormField">
+
+                                    <span class="error" id="lastNameError2"></span>
+                                    <input class="checkoutFormInput" id="lastName2" required="required"
+                                           type="text" name="orderPurchase[lastName]" aria-required="true"></div>
+
+                                <label class="checkoutFormFieldName" for="email2">Эл. почта (для уведомлений)</label>
+                                <div class="checkoutFormField">
+
+                                    <span class="error" id="emailError2"></span>
+                                    <input class="checkoutFormInput" id="email2" required="required"
+                                           type="text" name="orderPurchase[email]" aria-required="true"></div>
+
+                                <label class="checkoutFormFieldName" for="phone2">Номер телефона</label>
+                                <div class="checkoutFormField">
+
+                                    <span class="error" id="phoneError2"></span>
+                                    <input class="checkoutFormSmallInput" id="phone2" required="required" minlength="14"
+                                           type="text" name="orderPurchase[phone]" placeholder="+83(__)" maxlength="14"
+                                           aria-required="true"></div>
+                            </div>
+
+                            <div class="checkoutFormBlock">
+                                <div class="checkoutFormBlockName">Адрес доставки</div>
+
+                                <label class="checkoutFormFieldName" for="zipCode">Индекс</label>
+                                <div class="checkoutFormField">
+
+                                    <span class="error" id="zipcodeError"></span>
+                                    <input class="checkoutFormSmallInput" id="zipCode" type="text"
+                                           name="orderPurchase[zipCode]"></div>
+
+                                <label class="checkoutFormFieldName" for="address2">Адрес</label>
+                                <div class="checkoutFormField">
+                                    <textarea class="checkoutFormTextArea" id="address2" name="orderPurchase[address]"></textarea></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <input type="button" class="payButton" value = "Перейти к оплате">
+<!-- --------------------------------------------- -->
+
+                <footer class="navbar-bottom">
+                    <!--<footer class="navbar-fixed-bottom">-->
+
+                    <div class="container-fluid  row footerTop">
+                        <div class="container">
+                            <div class="col-md-2 footerLinks">
+                                <a class="shippingHandling" href="#">Доставка и оплата</a>
+                                <a class="contactsLink" href="#">Контакты</a>
+                            </div>
+                            <div class="col-md-3 col-md-offset-1 footerEmailLink">
+                                <a href="mailto:hello@handmade.ru">hello@doityourself.com</a>
+                                <p>По всем вопросам и предложениям пишите нам на эл. почту</p>
+                            </div>
+                            <div class="col-md-5 col-md-offset-1 mailingForm row">
+                                <p>Подписаться на рассылку</p>
+                                <div class="col-md-8">
+                                    <input type="email" class="form-control" placeholder="Введите адрес эл. почты">
+                                </div>
+                                <div class="col-md-4"><button type="submit" class="btn btn-default">Подписаться</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid  row footerCopyright">
+                        <div class="container">
+                            <div class="col-md-6">© doityourself.com, 2017 — 2018</div>
+                            <div class="col-md-6 socialLinks text-right"  id="socialLinks">
+                                <a href="https://www.instagram.com/handmadebyru/" class="in"></a>
+                                <a href="https://twitter.com/handmadebyru" class="tw"></a>
+                                <a href="https://www.facebook.com/handmadebyru/" class="fb"></a>
+                                <a href="https://vk.com/handmadebyru" class="vk"></a>
+                                <a href="https://telegram.me/handmaderu" class="tlg"></a>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+        </footer>
+
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="node_modules/bootstrap/js/dropdown.js"></script>
+        <!--<script src="node_modules/jquery-ui/build/"></script>-->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="js/order.js" type="text/javascript"></script>
+</body>
+</html>

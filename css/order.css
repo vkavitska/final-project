@@ -1,0 +1,274 @@
+/*developed by Tamara Lobzina*/
+.content{
+    margin: 0 20px;
+    max-width: 100%;
+}
+
+.basketWrapper{
+    padding-top: 25px;
+    background: #fff;
+}
+
+.basketHeader {
+    font-size: 40px;
+    font-family: 'Proxima Nova Bold';
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.basketMessage {
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom:10px;
+}
+
+.checkout{
+    padding:35px 60px 40px;
+    margin-bottom:120px;
+    background-color: #ffffff;
+}
+
+
+form{
+    display: block;
+}
+
+.checkoutTitle{
+    font-size:40px;
+    font-family:'Proxima Nova Rg Bold';
+    letter-spacing: 0.4px;
+    text-align: left;
+    margin-bottom: 27px;
+}
+
+.checkoutFormWrapper{
+    flex-direction:row;
+    display:flex;
+}
+
+.checkoutForm{
+    width:400px;
+    margin-right:120px;
+    display:inline-block;
+}
+
+.checkoutForm1{
+    width:100%;
+}
+
+.checkoutFormBlock{
+    margin-bottom:40px;
+}
+
+.checkoutFormBlockName{
+    font-size: 18px;
+    font-family: 'Proxima Nova Rg Bold';
+    font-weight: bold;
+    line-height: 1.33;
+    letter-spacing: 0.4px;
+    margin-bottom: 14px;
+}
+
+.checkoutFormFieldName{
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    margin-bottom: 6px;
+    font-weight:normal;
+}
+
+.checkoutFormField {
+    margin-bottom: 20px;
+}
+
+.checkoutFormTextArea{
+    box-sizing:border-box;
+    width:100%;
+}
+
+input{
+    padding: 14px 15px;
+    color:#222222;
+    font-size:15px;
+    border:solid 1px #f0f0f0;
+    background-color: #ffffff;
+    border-radius:4px;
+    -webkit-appearance:textfield;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 11px system-ui;
+    -webkit-writing-mode: horizontal-tb;
+}
+
+.checkoutFormSmallInput{
+    width:100px;
+}
+
+.checkoutFormTextArea{
+    width: 100%;
+    height: 80px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+textarea{
+    padding: 14px 15px;
+    color: #222222;
+    border: solid 1px #ffffff;
+    background-color: #ffffff;
+    border-radius: 4px;
+    -webkit-appearance: textarea;
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    cursor: text;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 11px system-ui;
+    -webkit-writing-mode: horizontal-tb;
+}
+
+.error{
+    color: #ff8181;
+    text-transform: lowercase;
+    padding-left:5px;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+
+.checkoutTotal{
+    width:480px;
+    display:inline-block;
+}
+
+.check{
+    padding:47px 58px 60px;
+    min-height:581px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 4px #222222;
+    color: #222222;
+}
+
+.total{
+    font-size: 24px;
+    font-family: Proxima Nova Rg Bold;
+    line-height: 1;
+    letter-spacing: .6px;
+    margin-bottom: 13px;
+    font-weight:bold;
+}
+
+.mycheckout, .totalPrice1{
+    font-size: 18px;
+    line-height: 1.44;
+    letter-spacing: .4px;
+    margin-bottom: 0px;
+}
+
+.goods, .shippingInfo{
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.pricing, .shippingHryvna, .pricing2{
+    position:relative;
+    padding-right: 12px;
+    white-space: nowrap;
+
+}
+
+.hryvna{
+    font-size: 14px;
+    color: #222;
+    font-family: Proxima Nova Rg;
+}
+
+.shipment{
+    font-size: 18px;
+    line-height: 1.44;
+    letter-spacing: .4px;
+    margin-bottom: 8px;
+}
+
+shippingCost{
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.totalPrice{
+    border-top:1px solid #ececec;
+    padding-top: 12px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.totalPrice1{
+    font-size: 18px;
+    line-height: 1.44;
+    letter-spacing: .4px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.price2{
+    font-size: 36px;
+    font-family: Proxima Nova Rg;
+    font-weight:bold;
+    letter-spacing: .9px;
+    display: inline-block;
+}
+
+.hryvna2{
+    font-size: 14px;
+    color: #222;
+    font-family: Proxima Nova Rg;
+}
+
+
+.agreementText{
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.checkFooter{
+    color: #999999;
+    letter-spacing: 0.3px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+/*----------------------------------------------*/
+
+
+

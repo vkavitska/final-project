@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!--Header and footer, Fourth page, Fifth page developed by Nastya Suvorova;
+Login, Register modal, First main page, Second page, Third page developed by Viktoriia Kavitska;
+Cart Icon Modal developed by Tamara Lobzina-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Подарки ручной работы, хендмейд, дизайнерские и необычные вещи - Love Handmade</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="icon" href="https://handmade.ru/assets/favicon/fav/apple-touch-icon-57x57-c4d7517bdf5fd7b8e65a592ffdefd2bda2c52fdd17f2b4c0e352cd891b6ea923.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/indexpage.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/basket.css">
+    <link rel="stylesheet" href="css/filters.css">
+</head>
+
+<body>
+<header class="container-fluid">
+    <div class="container">
+        <div class="row topHeader">
+            <div class="col-md-4">
+                <a class="shippingHandling" href="#">Доставка и оплата</a>
+                <a class="contactsLink" href="#">Контакты</a>
+            </div>
+            <div class="col-md-4 text-center" id="goToIndexHtml"><h1>Do It Yourself</h1></div>
+            <div class="col-md-4 text-right">
+                <a data-toggle="modal" data-target="#registerModal">Регистрация</a>
+                <a data-toggle="modal" data-target="#loginModal">Войти</a>
+                <img class="basket" src="images/basket.png" alt="Корзина">
+                <a class="btn btn-default" id="basketIcon">0</a>
+            </div>
+        </div>
+        <nav class="text-center categoryTags" id="categoryNameMainPage">
+        </nav>
+    </div>
+
+    <!--Login Modal-->
+    <div id="loginModal" class="modal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color: gray">Войти</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form" name="loginForm">
+                        <div class="form-group">
+                            <label class="sr-only" for="email">Email address</label>
+                            <input type="email" class="form-control input-sm" id="email" placeholder="Email">
+                            <p><span id="errorEmail"></span></p>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="password">Password</label>
+                            <input type="password" class="form-control input-sm" id="password" placeholder="Password">
+                            <p><span id="errorPassword"></span></p>
+                        </div>
+                        <div class="checkbox" style="color: gray">
+                            <label><input type="checkbox" id="rememberMe" checked> Remember me</label>
+                        </div>
+                        <button type="button" class="btn btn-info btn-sm" id="btnSignin">Sign in</button>
+                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal" id="btnCancelLogin">Cancel</button>
+                        <p><span id="noRegister"></span></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------->
+
+    <!--Register Modal-->
+    <div id="registerModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color: gray">Регистрация</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form" name="registerForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" id="firstName" placeholder="First Name">
+                            <p><span id="firstNameError"></span></p>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" id="lastName" placeholder="Last Name">
+                            <p><span id="lastNameError"></span></p>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control input-sm" id="emailRegister" placeholder="Email">
+                            <p><span id="emailError"></span></p>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" id="phone" placeholder="+380000000000">
+                            <p><span id="phoneError"></span></p>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" id="address" placeholder="Address">
+                            <p><span id="addressError"></span></p>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control input-sm" id="passwordRegister" placeholder="Password">
+                            <p><span id="passwordError"></span></p>
+                        </div>
+                        <button type="button" class="btn btn-info btn-sm" id="btnSignup">Sign up</button>
+                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------->
+
+    <!-- Hello alert-->
+    <div class="alert alert-success alert-dismissable" id="helloAlert" style="display: none">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong id="helloMsg"></strong>
+    </div>
+    <!---------------->
+
+    <!--Basket-->
+    <!--Cart Icon Modal-->
+    <div class="modal fade" id="cartIconModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModal">Корзина</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="cart">
+
+                    </div>
+                    <div id="savedData"></div>
+                </div>
+                <!--script in JS-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="makePurchase">Оформить покупку</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Cart Icon Modal-->
+</header>
+
+
+<!--FIRST MAIN PAGE-->
+<!--Carousel-->
+<div id="mainPage">
+    <div class="page-block" id="Slider">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="item active" id="firstSlide">
+                    <img src="images/carousel_img/carousel_1.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h3>Оригинальные головные уборы от лучших дизайнеров</h3>
+                        <p class="btn btn-warning" id="shapki">Посмотреть </p>
+                    </div>
+                </div>
+
+                <div class="item" id="secondSlide">
+                    <img src="images/carousel_img/carousel_2.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h3>Крафтовые рюкзаки-стильный и надежный аксессуар </h3>
+                        <p class="btn btn-warning" id="rukzak">Посмотреть </p>
+                    </div>
+                </div>
+
+                <div class="item" id="thirdSlide">
+                    <img src="images/carousel_img/carousel_3.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h3>Портмоне ручной работы, сделанные с душой</h3>
+                        <p class="btn btn-warning" id="portmone">Посмотреть </p>
+                    </div>
+                </div>
+            </div>
+
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!------->
+
+    <!--SECOND PAGE-->
+    <!-- Categories Block-->
+    <div id="categoriesPage" class="container-fluid">
+        <div id="categoryName"></div>
+        <div id="productsInfoBlock" >
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div id="subcategoriesName">
+                        <ul id="subcategoryName-li">
+                        </ul>
+                        <!-- ползунок цены -->
+                        <div class="storePrices">
+                            <p><label>Цена, грн</label></p>
+                            <!--Растягивается на 100% ширину родительского блока-->
+                            <div id="priceSlider"></div>
+                            <p>
+                                <input id="minprice" class="inputPrice">
+                                <span class="dah"></span>
+                                <input id="maxprice" class="inputPrice">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- проверка вывода продуктов -->
+                <div id="products" class="col-md-8 col-sm-6">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------->
+    <!------------------->
+
+
+    <!--THIRD PAGE-->
+    <!-- Product Block-->
+    <div id="productBlock">
+        <ol class="breadcrumb" id="navigation"></ol>
+        <div id="productPage" class="row">
+            <div id="productImg" class="col-md-6 col-sm-6">
+            </div>
+
+            <div id="productInfo" class="col-md-6 col-sm-6">
+            </div>
+        </div>
+    </div>
+    <!------------------->
+    <!------------------->
+
+
+    <!--FOURTH PAGE SUVOROVA-->
+    <!-- Contacts-->
+    <div id="contactsBlock">
+        <div id="contacts"></div>
+        <div id="textContacts">
+            <h1>Контактная информация</h1>
+            <p><strong>Наш адрес:</strong> ул. Троицкая 60</p>
+            <p><strong>Телефон:</strong> +38 (093) 021-27-77</p>
+        </div>
+
+    </div>
+    <!------------------->
+    <!------------------->
+
+
+    <!--FIFTH PAGE SUVOROVA-->
+    <!-- shipping-->
+    <div id="shipping">
+        <h1>Доставка и оплата</h1>
+        <p>Отправим вашу покупку в любую точку мира!</p>
+        <p>Сотрудничаем со службами доставки Нова пошта и DHL Express.</p>
+    </div>
+    <!------------------->
+    <!------------------->
+
+
+    <footer class="navbar-bottom">
+        <!--<footer class="navbar-fixed-bottom">-->
+
+        <div class="container-fluid  row footerTop">
+            <div class="container">
+                <div class="col-md-2 footerLinks">
+                    <a class="shippingHandling" href="#">Доставка и оплата</a>
+                    <a class="contactsLink" href="#">Контакты</a>
+                </div>
+                <div class="col-md-3 col-md-offset-1 footerEmailLink">
+                    <a href="mailto:hello@handmade.ru">hello@doityourself.com</a>
+                    <p>По всем вопросам и предложениям пишите нам на эл. почту</p>
+                </div>
+                <div class="col-md-5 col-md-offset-1 mailingForm row">
+                    <p>Подписаться на рассылку</p>
+                    <div class="col-md-8">
+                        <input type="email" class="form-control" placeholder="Введите адрес эл. почты">
+                    </div>
+                    <div class="col-md-4"><button type="submit" class="btn btn-default">Подписаться</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid  row footerCopyright">
+            <div class="container">
+                <div class="col-md-6">© doityourself.com, 2017 — 2018</div>
+                <div class="col-md-6 socialLinks text-right"  id="socialLinks">
+                    <a href="https://www.instagram.com/handmadebyru/" class="in"></a>
+                    <a href="https://twitter.com/handmadebyru" class="tw"></a>
+                    <a href="https://www.facebook.com/handmadebyru/" class="fb"></a>
+                    <a href="https://vk.com/handmadebyru" class="vk"></a>
+                    <a href="https://telegram.me/handmaderu" class="tlg"></a>
+                </div>
+            </div>
+        </div>
+</div>
+</footer>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="node_modules/bootstrap/js/dropdown.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script src="js/login.js" type="text/javascript"></script>
+<script src="js/register.js" type="text/javascript"></script>
+<script src="js/productsItem.js" type="text/javascript"></script>
+<script src="js/carousel.js" type="text/javascript"></script>
+<script src="js/categories.js" type="text/javascript"></script>
+<script src="js/filters.js" type="text/javascript"></script>
+<script src="js/basket.js" type="text/javascript"></script>
+<script src="js/product.js" type="text/javascript"></script>
+<script src="js/app.js" type="text/javascript"></script>
+<script src="js/functions.js" type="text/javascript"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn5KKCdTzjq9KSv_myLkqMTNNzZpwXXQ8&callback=initMap"></script>
+</body>
+</html>

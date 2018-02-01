@@ -1,0 +1,27 @@
+{
+  "name": "final_project_this",
+  "version": "1.0.0",
+  "description": "This is an online store project that is designed for learning purposes. The project uses HTML5, CSS3, JavaScript(ES6+).  As an assembly system and tasks used Gulp. Used libraries Bootstrap.js, jQuery.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kavitska Viktoriia, Lobzina Tamara, Suvorova Nastya",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "google-fonts": "^1.0.0",
+    "gulp-uglifycss": "^1.0.9",
+    "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^3.0.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}

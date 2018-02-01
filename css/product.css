@@ -1,0 +1,20 @@
+/*developed by Viktoriia Kavitska*/
+#productPage{
+    margin: 50px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row; /*Пункты внутри контейнера будут располагаться горизонтально*/
+    align-items: stretch; /*Пункты внутри контейнер будут принимать всю его высоту*/
+}
+
+#productImg img{
+    width: 100%;
+}
+
+#productInfo button{
+    color: #ffde27;
+}
+/*------------------------------------*/
+#navigation{
+	padding-left: 65px;
+}
